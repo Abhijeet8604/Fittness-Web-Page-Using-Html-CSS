@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+
+$(document).ready(function(){
+$("#flip").click(function(){
+$("#panel").slideToggle("slow");
+});
+});
+var i=0;
+var images=[];
+var time=2000;
+
+images[0]='handf5.jpg';
+images[1]='handf6.jpg';
+images[2]='handf7.webp';
+
+function changeImg(){
+document.slide.src=images[i];
+
+if(i< images.length-1){
+i++;
+}else{
+i=0;
+}
+setTimeout("changeImg()",time);
+}
+window.onload=changeImg;
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+document.getElementById("defaultOpen").click();
+</script>
+<style>
+#panel, #flip {
+padding: 5px;
+text-align: center;
+background-color: #e5eecc;
+border: solid 1px #c3c3c3;
+}
+
+#panel {
+padding: 50px;
+display: none;
+}
+.myDiv1 {
+   margin: auto;
+  width: 50%;
+  border: none;
+  padding: 10px;
+  text-align: center;
+border-color: none;
+background-color: #F0FFFF;
+}
+.myDiv2 {
+   margin: auto;
+  width: 100%;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+border-color: none;
+background-color:red;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.column {
+  float: left;
+  width: 20%;
+  align:center'
+  padding: 10px;
+}
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+.column img:hover {
+  opacity: 1;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container {
+  position: relative;
+  display: none;
+}
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+.tablink:hover {
+  background-color: #777;
+} 
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+#London {background-color:red;}
+#Paris {background-color:Aqua;}
+#Tokyo {background-color:Cornsilk;}
+#Oslo {background-color:orange;}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  width: 187px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.active {
+  background-color: #1E90FF;
+  color: white;
+}
+.topnav .icon {
+  display: none;
+}
+
+</style>
+</head>
+<body align="center">
+<div id="flip">TIPS OF EVERYDAY HEALTH</div>
+<div id="panel"><ol>
+<li>Stay Hydrated</li>
+<li>Eat Plenty of Fruits and Vegetables.</li>
+<li>Don't Skip Your Meals.</li>
+<li>Avoid Fatty, Processed Foods.</li>
+<li>Include More Lean Meats, Low-Fat Dairy Products, and Whole Grains To Your Diet.</li>
+<li>Load Up on Good Fats.</ol>
+</ul></div>
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Health Topics</a>
+  <a href="D:\Term-3\INT303 (Web system and Technology)\web\wellness.html">Wellness</a>
+  <a href="D:\Term-3\INT303 (Web system and Technology)\web\food&eating.html">Food & Eating</a>
+  <a href="D:\Term-3\INT303 (Web system and Technology)\web\drugs.html">Drugs </a>
+  <a href="D:\Term-3\INT303 (Web system and Technology)\web\newsletter.html">Newsletters</a>
+  <a href="D:\Term-3\INT303 (Web system and Technology)\web\covid.html">Covid-19</a>
+  <a href="D:\Term-3\INT303 (Web system and Technology)\web\sociallogin.html">Login</a>
+  <a href="D:\Term-3\INT303 (Web system and Technology)\web\socialsignup.html">Signup</a>
+</div>
+<img name="slide" width="1500" height="500">
+<div id="London" class="tabcontent">
+  <h1>Eat Healthy</h1>
+  <p>“Healthy does NOT mean starving yourself EVER. Healthy means eating the right food in the right amount” – <b><i>Karen Salmansohn.</b></i></p>
+  <img src="D:\Term-3\INT303 (Web system and Technology)\web\healthyfood.jpg"height="280" width="400">
+</div>
+<div id="Paris" class="tabcontent">
+  <h1>Do Exercises</h1>
+  <p>“An early-morning walk is a blessing for the whole day.” ― <b><i>Henry David Thoreau</b></i></p> 
+  <img src="D:\Term-3\INT303 (Web system and Technology)\web\doexercises.jpg"height="280" width="400">
+</div>
+<div id="Tokyo" class="tabcontent">
+  <h1>Take Full Sleep</h1>
+  <p>“If you want a head start on tomorrow, eat breakfast tonight – that way you can sleep until lunchtime.” –  <b><i>Anonymous. </b></i></p>
+  <img src="D:\Term-3\INT303 (Web system and Technology)\web\sleepmore.webp"height="280" width="400">
+</div>
+<div id="Oslo" class="tabcontent">
+  <h1>Start Running</h1>
+  <p>“I don’t run to add days to my life, I run to add life to my days.” – <b><i>Ronald Rook</b></i></p>
+  <img src="D:\Term-3\INT303 (Web system and Technology)\web\startrunning.jpg"height="280" width="400">
+</div>
+<button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">Eat Healthy</button>
+<button class="tablink" onclick="openCity('Paris', this, 'Aqua')">Do Exercises</button>
+<button class="tablink" onclick="openCity('Tokyo', this, 'Cornsilk')">Take Full Sleep</button>
+<button class="tablink" onclick="openCity('Oslo', this, 'orange')">Start Running</button>
+<img src="D:\Term-3\INT303 (Web system and Technology)\web\sports.jpg"width="1540" >
+<h1>Daily Exercises & Workouts</h1>
+<div class="row">
+  <div class="column">
+    <img src="D:\Term-3\INT303 (Web system and Technology)\web\handf1.jpg"height="280" width="400"  alt="Nature" style="width:100%" onclick="myFunction(this);">
+  <b>"Yoga is the journey of the self, through the self, to the self." -- The Bhagavad Gita</b></div>
+  <div class="column">
+    <img src="D:\Term-3\INT303 (Web system and Technology)\web\handf2.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  <b>"If you think lifting is dangerous, try being weak. Being weak is dangerous."— Bret Contreras</b></div>
+  <div class="column">
+    <img src="D:\Term-3\INT303 (Web system and Technology)\web\handf3.jpg" height="280" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+   <b>“Every run is a work of art, a drawing on each day’s canvas. Some runs are shouts and some runs are whispers. Some runs are eulogies and others celebrations.” — Dagny Scott Barrios</b></div>
+  <div class="column">
+    <img src="D:\Term-3\INT303 (Web system and Technology)\web\handf4.jpg"height="280" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  <b>“Life is like riding a bicycle. To keep your balance you must keep moving” ——  Albert Einstein</b></div>
+  <div class="column">
+    <img src="D:\Term-3\INT303 (Web system and Technology)\web\handf8.webp"height="280" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  <b>“Exercises are like prose, whereas yoga is the poetry of movements.”― Amit Ray</b></div>
+  <div class="column">
+    <img src="D:\Term-3\INT303 (Web system and Technology)\web\handf5.jpg"height="280" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  <b>“There is something magical about running; after a certain distance, it transcends the body. Then a bit further, it transcends the mind. A bit further yet, and what you have before you, laid bare, is the soul.” — Kristin Armstrong</b></div>
+  <div class="column">
+    <img src="D:\Term-3\INT303 (Web system and Technology)\web\handf9.jpg"height="280" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  <b>“Exercises are like prose, whereas yoga is the poetry of movements.”― Amit Ray</b></div>
+  <div class="column">
+    <img src="D:\Term-3\INT303 (Web system and Technology)\web\handf10.jpg"height="280" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+   <b>"Success is walking from failure to failure with no loss of enthusiasm."— Winston Churchill</b></div>
+   <div class="column">
+    <img src="D:\Term-3\INT303 (Web system and Technology)\web\handf11.jpg"height="280" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  <b>"If you want something you’ve never had, you must be willing to do something you’ve never done."— Thomas Jefferson</b></div>
+</div>
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+<div class="myDiv2">
+<h1><b><u>EAT HEALTHY STAY HEALTHY</u></b></h1>
+ <p><b>“Your diet is a bank account. Good food choices are good investments.” </b>– <b><i>Bethenny Frankel</b></i></p>
+<img src="D:\Term-3\INT303 (Web system and Technology)\web\eat.png" height="300" width="500">
+</div>
+<h1> <u>Join Us Now</u> </h1>
+<div class="row">
+  <div class="column">
+    <img src="D:\Term-3\INT303 (Web system and Technology)\web\staysafe.jpg"height="280" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="D:\Term-3\INT303 (Web system and Technology)\web\f&h.png" height="280"alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="D:\Term-3\INT303 (Web system and Technology)\web\stayfit.jpg"height="280" alt="Mountains" style="width:100%">
+  </div>
+</div>
+<div class="myDiv1">
+<h1>Fitness</h1>
+<b>Move More Stay More</b><br>
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-instagram"></a>
+</div>
+</body>
+</html>
+
